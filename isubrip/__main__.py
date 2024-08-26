@@ -299,6 +299,16 @@ async def download_media_item(scraper: Scraper, media_item: Movie | Episode, con
                 logger.info(f"{success_count}/{success_count + failed_count} matching subtitles "
                             f"were successfully downloaded.")
 
+            import winsound
+                winsound.PlaySound('D:\\Alarm02.wav', winsound.SND_FILENAME)
+                """
+                duration = 1000  # milliseconds
+                freq = 440  # Hz
+                winsound.Beep(freq, duration)
+                """
+                from sys import exit
+                exit()
+
             else:
                 logger.info("No matching subtitles were found.")
 
