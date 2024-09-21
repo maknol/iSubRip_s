@@ -301,11 +301,18 @@ async def download_media_item(scraper: Scraper, media_item: Movie | Episode, con
 
             import winsound
                 winsound.PlaySound('D:\\Alarm02.wav', winsound.SND_FILENAME)
-                """
+                """ OLD ONE PLAY SOUND
                 duration = 1000  # milliseconds
                 freq = 440  # Hz
                 winsound.Beep(freq, duration)
                 """
+                # Write to file the names of downloaded to know what is downloaded
+                file1 = open('C:\\Users\\makno\\Desktop\\iTuneNew.txt', "a")
+                L = [f"{media_item.name}"]
+                file1.writelines(L)
+                file1.write('\n')
+                file1.close()
+                #End
                 from sys import exit
                 exit()
 
